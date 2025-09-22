@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浜田高校オープンスクール</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a202c; /* 濃い紺色 */
+        }
+        .text-navy {
+            color: #000080;
+        }
+        /* アニメーション */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        .animate-bounce {
+            animation: bounce 1s infinite;
+        }
+        /* メディアクエリを使わず、Tailwindのレスポンシブクラスを優先します */
+    </style>
+</head>
+<body class="bg-white">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <h1 class="text-3xl font-bold text-navy mb-4 md:mb-0">浜田高校オープンスクール</h1>
+            <!-- ナビゲーションメニュー -->
+            <nav class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 items-center">
+                <a href="#about" class="text-navy hover:text-blue-500 font-semibold transition-colors">開催概要</a>
+                <a href="#photo" class="text-navy hover:text-blue-500 font-semibold transition-colors">フォトギャラリー</a>
+                <a href="#form" class="bg-blue-600 text-white rounded-full px-6 py-2 hover:bg-blue-700 transition duration-300 shadow-lg mt-2 md:mt-0">お申し込み</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="relative bg-white py-20 lg:py-32 overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1920x1080/000080/FFFFFF?text=Hamada+High+School');"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-4 animate-fade-in-down">未来の自分に出会おう</h2>
+                <p class="text-lg lg:text-xl text-gray-700 mb-8 max-w-2xl mx-auto animate-fade-in">
+                    浜田高校の学びと活気に満ちた雰囲気を体験してみませんか？<br>
+                    先輩たちと直接話せるチャンスです！
+                </p>
+                <a href="#form" class="inline-block bg-blue-600 text-white font-bold rounded-full px-10 py-4 text-xl shadow-xl hover:bg-blue-700 transition duration-300 transform hover:scale-105 animate-bounce">今すぐ申し込む</a>
+            </div>
+        </section>
+
+        <!-- 開催概要セクション -->
+        <section id="about" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-navy text-center mb-10">開催概要</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition duration-300 hover:shadow-2xl">
+                        <div class="text-4xl text-blue-600 mb-4">📅</div>
+                        <h4 class="text-xl font-semibold text-navy mb-2">開催日</h4>
+                        <p class="text-gray-700">2023年10月28日(土)</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition duration-300 hover:shadow-2xl">
+                        <div class="text-4xl text-blue-600 mb-4">⏰</div>
+                        <h4 class="text-xl font-semibold text-navy mb-2">開催時間</h4>
+                        <p class="text-gray-700">午前 9:00 - 12:00 (受付 8:30)</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center transition duration-300 hover:shadow-2xl">
+                        <div class="text-4xl text-blue-600 mb-4">📍</div>
+                        <h4 class="text-xl font-semibold text-navy mb-2">場所</h4>
+                        <p class="text-gray-700">浜田高校 本校舎</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- フォトギャラリーセクション -->
+        <section id="photo" class="py-16">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-navy text-center mb-10">フォトギャラリー</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- 写真を挿入するプレースホルダー -->
+                    <div class="overflow-hidden rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/000080?text=思い出の一枚" alt="過去のオープンスクール写真1" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/000080?text=学校の雰囲気" alt="過去のオープンスクール写真2" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/000080?text=先輩たちと交流" alt="過去のオープンスクール写真3" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="overflow-hidden rounded-xl shadow-lg transform transition duration-300 hover:scale-105">
+                        <img src="https://placehold.co/400x300/e2e8f0/000080?text=体験授業の様子" alt="過去のオープンスクール写真4" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お申し込みフォームセクション -->
+        <section id="form" class="py-16 bg-blue-50">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-navy text-center mb-10">お申し込みフォーム</h3>
+                <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+                    <form onsubmit="event.preventDefault(); showThankYouMessage();">
+                        <div class="mb-6">
+                            <label for="name" class="block text-navy font-semibold mb-2">お名前</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: 浜田 太郎" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="school" class="block text-navy font-semibold mb-2">中学校名</label>
+                            <input type="text" id="school" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: 浜田市立第一中学校" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-navy font-semibold mb-2">メールアドレス</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="例: hamada.taro@example.com" required>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold rounded-full py-3 hover:bg-blue-700 transition duration-300 shadow-md">申し込む</button>
+                    </form>
+                </div>
+                <!-- 申し込み完了メッセージ -->
+                <div id="thank-you-message" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+                    <div class="bg-white p-8 rounded-xl text-center shadow-2xl transform scale-95 transition-transform duration-300 ease-in-out">
+                        <h4 class="text-2xl font-bold text-navy mb-4">お申し込みありがとうございます！</h4>
+                        <p class="text-gray-700 mb-6">受付完了メールをお送りしましたのでご確認ください。</p>
+                        <button onclick="hideThankYouMessage()" class="bg-blue-600 text-white rounded-full px-8 py-2 hover:bg-blue-700 transition duration-300">閉じる</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-navy text-white text-center py-6 mt-10">
+        <p>&copy; 2023 浜田高校. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // 申し込み完了メッセージの表示
+        function showThankYouMessage() {
+            const thankYouMessage = document.getElementById('thank-you-message');
+            thankYouMessage.classList.remove('hidden');
+            thankYouMessage.classList.add('flex');
+            // アニメーション
+            setTimeout(() => {
+                const messageBox = thankYouMessage.querySelector('div');
+                messageBox.classList.remove('scale-95');
+                messageBox.classList.add('scale-100');
+            }, 50);
+        }
+
+        // 申し込み完了メッセージの非表示
+        function hideThankYouMessage() {
+            const thankYouMessage = document.getElementById('thank-you-message');
+            const messageBox = thankYouMessage.querySelector('div');
+            messageBox.classList.remove('scale-100');
+            messageBox.classList.add('scale-95');
+            setTimeout(() => {
+                thankYouMessage.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
